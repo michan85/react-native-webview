@@ -1170,21 +1170,5 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
       }
       super.destroy();
     }
-
-    WebChromeClient mWebChromeClient;
-    @Override
-    public void setWebChromeClient(WebChromeClient client) {
-      this.mWebChromeClient = client;
-      super.setWebChromeClient(client);
-    }
-
-    @Override
-    public void destroy() {
-      if(mWebChromeClient!=null){
-        mWebChromeClient.onHideCustomView();
-      }
-      super.destroy();
-    }
-
   }
 }
